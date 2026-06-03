@@ -10,6 +10,10 @@ from zpl_toolkit.types import (
     GenerationTemplate,
 )
 
+from zpl_toolkit.connection import ZemaxConnection
+from zpl_toolkit.parser import ZPLParser
+from zpl_toolkit.generator import ZPLGenerator
+
 __all__ = [
     "ConnectionConfig",
     "ZPLExecutionResult",
@@ -18,4 +22,7 @@ __all__ = [
     "MacroInfo",
     "RegressionTestResult",
     "GenerationTemplate",
+    "ZemaxConnection",
+    "ZPLParser",
+    "ZPLGenerator",
 ]
