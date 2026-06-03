@@ -1,0 +1,37 @@
+[project]
+name = "zpl-toolkit"
+version = "0.1.0"
+description = "Python CLI and library for ZPL macro development, debugging, and regression testing with OpticStudio ZOS-API"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ZPL Automation" }]
+readme = "README.md"
+
+dependencies = [
+    "pythonnet>=3.1.0",
+    "click>=8.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+]
+
+[project.scripts]
+zemax-debug = "zemax_debug.cli:main"
+
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["zpl_toolkit*", "zemax_debug*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
