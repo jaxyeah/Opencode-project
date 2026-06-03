@@ -219,7 +219,7 @@ class ZPLGenerator:
         # Simple {key} substitution
         result = tmpl.template_body
         for key, value in merged.items():
-            result = result.replace(f"$${key}", str(value))
+            result = result.replace("$" + key, str(value))
 
         # Handle #if blocks
         result = self._process_conditionals(result, merged)
