@@ -14,6 +14,8 @@ from zpl_toolkit.connection import ZemaxConnection
 from zpl_toolkit.parser import ZPLParser
 from zpl_toolkit.generator import ZPLGenerator
 
+from zpl_toolkit.bridge import ZOSAPIBridge
+
 __all__ = [
     "ConnectionConfig",
     "ZPLExecutionResult",
@@ -25,4 +27,5 @@ __all__ = [
     "ZemaxConnection",
     "ZPLParser",
     "ZPLGenerator",
+    "ZOSAPIBridge",
 ]
